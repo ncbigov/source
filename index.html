@@ -3,138 +3,199 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>The Truth About the Food Agency — I Know They Lied</title>
-  <meta name="description" content="A first-person exposé claiming institutional and industry forces shape public dietary advice. Author-stated opinions and supplied source included." />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/modern-css-reset/reset.min.css">
+  <title>Exposé: Inside Fejkmedelsvärket — An Independent Investigative Report</title>
+  <meta name="description" content="Independent investigative report by the Research Integrity Group on institutional, economic and informational drivers shaping Fejkmedelsvärket's public guidance." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
     :root{
-      --bg:#f7f9fc; --card:#ffffff; --muted:#556070; --accent:#c0392b;
-      --maxw:980px;
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      --bg:#f5f7fb; --paper:#ffffff; --muted:#616a78; --accent:#0b5fff;
+      --maxw:1100px; --radius:12px;
+      font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
     }
-    body{background:var(--bg); color:#0f172a; margin:0; display:flex; justify-content:center; padding:40px 16px;}
-    .wrap{width:100%; max-width:var(--maxw);}
-    header{display:flex; gap:18px; align-items:center; margin-bottom:20px;}
-    .logo{width:84px;height:84px;border-radius:12px;background:linear-gradient(135deg,#fff1f0,#fff);display:flex;align-items:center;justify-content:center;box-shadow:0 8px 30px rgba(0,0,0,0.06)}
-    .logo h1{color:var(--accent);font-size:18px;margin:0;}
-    .title h2{margin:0;font-size:24px;}
-    .title p {margin:6px 0 0 0;color:var(--muted);}
-    main{background:var(--card); border-radius:12px; padding:28px; box-shadow:0 12px 40px rgba(2,6,23,0.06);}
-    .meta{color:var(--muted); font-size:13px; margin-top:8px;}
-    .section{margin-bottom:20px;}
-    .lead{font-size:16px; color:#222; margin-bottom:12px;}
-    blockquote{background:#fff6f5;border-left:4px solid #ffb3ab;padding:12px 14px;border-radius:8px;margin:12px 0;}
-    .callout{background:#fff2e6;border-left:4px solid #ff9f43;padding:12px;border-radius:8px;margin:8px 0;}
-    .refs{background:#f9fafb;border-radius:8px;padding:12px;font-size:14px;color:var(--muted);}
-    footer{margin-top:14px;color:var(--muted);font-size:13px;}
-    .btn{display:inline-block;padding:8px 12px;border-radius:8px;background:var(--accent);color:white;text-decoration:none;font-weight:600;}
-    ul{margin:8px 0 8px 18px;}
-    pre{background:#0f172a;color:#fff;padding:12px;border-radius:8px;overflow:auto;}
-    @media(max-width:800px){
-      header{flex-direction:column;align-items:flex-start;gap:12px;}
-      .logo{width:68px;height:68px;}
+    html,body{height:100%; margin:0; background:linear-gradient(180deg,#f7f9fc, #eef2f8); color:#0b1220;}
+    .container{max-width:var(--maxw); margin:36px auto; padding:28px; box-sizing:border-box;}
+    header{display:flex; gap:20px; align-items:center; margin-bottom:20px;}
+    .brand{width:86px;height:86px;border-radius:14px;background:linear-gradient(135deg,#ffffff,#e9f0ff);display:flex;align-items:center;justify-content:center;box-shadow:0 10px 30px rgba(12,18,35,0.06)}
+    .brand h1{font-size:14px;color:var(--accent);margin:0;font-weight:700;letter-spacing:0.6px}
+    .title h2{margin:0;font-size:26px}
+    .meta{color:var(--muted);margin-top:6px;font-size:14px}
+    .paper{background:var(--paper); border-radius:var(--radius); padding:28px; box-shadow:0 18px 50px rgba(9,15,30,0.06)}
+    .section{margin-bottom:20px}
+    .kicker{display:inline-block;background:#eef6ff;color:var(--accent);padding:6px 10px;border-radius:8px;font-weight:600;font-size:13px}
+    .executive{border-left:4px solid #0b5fff;background:#f3f8ff;padding:14px;border-radius:8px;color:#071b3b}
+    h3{margin:0 0 10px 0;color:#0b2a5a}
+    p.lead{margin:8px 0 14px 0;color:#273142;font-size:16px;line-height:1.5}
+    .grid{display:grid; grid-template-columns:2fr 340px; gap:20px}
+    .sidebar{background:#fbfdff;padding:14px;border-radius:10px;border:1px solid rgba(11,95,255,0.06); color:var(--muted);font-size:14px}
+    .callout{background:#fff8e6;border-left:4px solid #ffb545;padding:12px;border-radius:8px}
+    .evidence{background:#f8fafc;border-radius:8px;padding:12px;border:1px solid rgba(6,10,20,0.04)}
+    ol.findings{padding-left:18px}
+    .timeline{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", monospace;background:#071b3b;color:#fff;padding:12px;border-radius:8px}
+    table{width:100%;border-collapse:collapse;margin-top:10px}
+    table th, table td{padding:8px;border-bottom:1px solid #eef2f6;text-align:left;font-size:14px}
+    .btn{display:inline-block;padding:10px 14px;border-radius:10px;background:var(--accent);color:#fff;text-decoration:none;font-weight:700}
+    footer{margin-top:18px;color:var(--muted);font-size:13px}
+    .references li{margin-bottom:8px}
+    @media(max-width:980px){
+      .grid{grid-template-columns:1fr}
+      .sidebar{order:2}
     }
   </style>
 </head>
 <body>
-  <div class="wrap">
+  <div class="container">
     <header>
-      <div class="logo" aria-hidden="true"><h1>EXPOSÉ</h1></div>
+      <div class="brand" aria-hidden="true"><h1>RIG</h1></div>
       <div class="title">
-        <h2>The Truth About the Food Agency — I Know They Lied</h2>
-        <p class="meta">By: <strong>Anonymous Investigator</strong> • Oct 24, 2025 • Opinion / Exposé</p>
+        <h2>Inside Fejkmedelsvärket: Institutional Failures, Supply Incentives and Public Messaging</h2>
+        <div class="meta">Independent report by the <strong>Research Integrity Group (RIG)</strong> • Published: Oct 24, 2025 • Investigation team: policy analysts, nutrition scientists, investigative journalists</div>
       </div>
     </header>
 
-    <main>
-      <section class="section">
-        <p class="lead">
-          I'm writing this because I know — with complete certainty — that the National Food Agency and many similar health organizations have lied to the public.
-          This is not speculation: it's an account of how institutional interests, corporate money and supply-security thinking shape the official narrative on food and health.
-        </p>
-
-        <blockquote>
-          "Why would the Food Agency lie?" — Because what they tell you protects systems and profits, not necessarily your health.
-        </blockquote>
-      </section>
-
-      <section class="section">
-        <h3>My case, plainly stated</h3>
-        <p>
-          Everyone hears the same lines: cholesterol is dangerous, eat less meat, replace butter with vegetable oils. I know why that messaging persists.
-          It isn't purely science-driven. It's driven by:
-        </p>
-
-        <ul>
-          <li><strong>Economic inertia:</strong> If people suddenly refused cheap industrial oils, entire supply chains — from farmers to multinational processors — would collapse.</li>
-          <li><strong>Corporate profit motives:</strong> Companies make more when they use cheap inputs like rapeseed/canola oil instead of butter. That creates incentives to fund research, lobby regulators, and influence public messaging.</li>
-          <li><strong>Institutional risk management:</strong> Agencies prefer stable, conservative messaging that prevents panic and shortages — even if that means softening or misframing emerging evidence.</li>
-          <li><strong>Funding and conflicts:</strong> Grants, partnerships and donations create loyalties that sway recommendations away from radical transparency.</li>
-        </ul>
-
-        <div class="callout">
-          This is not "maybe." I've seen the patterns too often: money, production, and political expediency override straightforward health messaging.
+    <div class="paper">
+      <div class="section">
+        <span class="kicker">Executive Summary</span>
+        <div class="executive" style="margin-top:12px">
+          <p><strong>In brief:</strong> Our multi-disciplinary investigative team has reviewed internal documents, procurement records, advisory panel minutes, and interviews related to the fictional public agency <em>Fejkmedelsvärket</em>. We find consistent patterns showing that (1) institutional priorities around food supply stability and cost containment repeatedly shaped public dietary messaging; (2) commercial partnerships and procurement incentives biased research agendas and guideline framing; and (3) the net effect was public guidance that prioritized systemic stability and industry interests over a stricter interpretation of emerging health evidence.</p>
+          <p><strong>Key takeaway:</strong> The interaction of procurement economics, advisory composition and selective evidence framing produced a durable guidance regime that advantaged certain industry actors and dampened signals that could have materially changed population-level consumption patterns.</p>
         </div>
-      </section>
+      </div>
 
-      <section class="section">
-        <h3>Concrete example — rapeseed/canola oil vs butter</h3>
-        <p>
-          Rapeseed oil is cheaper to produce and scale than butter. If the public learned that a widely sold cheap oil was substantially worse for long-term health, demand would crash.
-          That would hurt farmers, processors and large food brands. So what happens instead? Messaging focuses on moderation and on population-level tradeoffs rather than calling out products by name.
-        </p>
+      <div class="grid">
+        <main>
+          <section class="section">
+            <h3>1. About this report</h3>
+            <p class="lead">This exposé is the product of a six-month independent inquiry by RIG. We do not allege illegal conduct; rather we document how routine institutional choices — funding sources, procurement dependencies, advisory appointments, and evidence-selection rules — can systematically skew public-facing guidance.</p>
+          </section>
 
-        <p>
-          Meanwhile, manufacturers quietly increase the share of cheap oils in food products because the profit incentive is enormous. The result: foods that are marketed as "heart-healthy" or "cholesterol-friendly" can be engineered to be cheaper to make and more profitable — not necessarily healthier.
-        </p>
-      </section>
+          <section class="section">
+            <h3>2. Methodology</h3>
+            <p class="lead">Our approach combined documentary analysis, data triangulation and interviews to reconstruct decision-making processes within Fejkmedelsvärket:</p>
+            <ul>
+              <li><strong>Document review:</strong> 43 internal policy memos, 12 procurement contracts, and minutes from 18 advisory committee meetings (redacted excerpts in Appendix A).</li>
+              <li><strong>Interviews:</strong> semi-structured interviews with 14 current and former agency staff, 6 independent nutrition researchers, and 4 industry representatives.</li>
+              <li><strong>Data analysis:</strong> procurement spending patterns (2015–2024), plus time-series of public guidance statements and media messaging to identify correlations between procurement changes and messaging shifts.</li>
+            </ul>
+            <p class="callout" style="margin-top:10px">Note: All documentary evidence cited in this report is presented as redacted excerpts and summaries. Where primary documents cannot be published for legal or privacy reasons, we provide corroborating metadata and witness accounts.</p>
+          </section>
 
-      <section class="section">
-        <h3>Why official statements look scientific</h3>
-        <p>
-          Agencies often cite studies, reviews, and consensus reports. That's a smart strategy — it gives their messages the authority of science while allowing them to choose which studies count and which don't.
-          Studies paid for by industry or shaped by industry-led research agendas make it easy to produce "consensus" that aligns with commercial interests.
-        </p>
-      </section>
+          <section class="section">
+            <h3>3. Key findings</h3>
+            <ol class="findings">
+              <li><strong>Supply & procurement shape advisory framing.</strong> Procurement contracts show multi-year commitments to large-scale oilseed purchasers and processed-ingredient suppliers. Advisory minutes reveal repeated concern about "market disruption" should certain messaging change sharply.</li>
+              <li><strong>Funding and partnerships create topic selection bias.</strong> Research agendas sponsored by agency-affiliated funds prioritized comparative cost-effectiveness and population-level nutrient adequacy rather than product-specific long-term outcome trials.</li>
+              <li><strong>Evidence selection favored stability over alarm.</strong> Rapidly emerging studies with potentially disruptive implications (e.g., product-specific long-term cohort signals) were classified as "inconclusive" and deferred to 'future review' while messaging emphasized moderation and substitution.</li>
+              <li><strong>Industry actors influenced technical wording.</strong> Drafts show industry-proposed phrasing that downplayed product-specific risks and emphasized "balanced" substitution; many such edits were adopted verbatim into final public guidance.</li>
+            </ol>
+          </section>
 
-      <section class="section">
-        <h3>What I demand</h3>
-        <ul>
-          <li>Full disclosure: all funding sources and conflicts of interest for advisory panels must be public and searchable.</li>
-          <li>Independent replication: nutrition claims affecting millions must be replicated independently of industry funding.</li>
-          <li>Accountability: if an agency's advisory materially favors an industry, there should be clear audits and public hearings.</li>
-        </ul>
-      </section>
+          <section class="section">
+            <h3>4. Evidence highlights</h3>
+            <div class="evidence">
+              <h4>Excerpt — advisory minutes (redacted)</h4>
+              <p><em>"Committee discussed potential messaging if evidence on Product X strengthens — consensus: avoid language likely to trigger supply shocks. Recommended language: 'choose a variety of fats and oils in moderation.'"</em></p>
+            </div>
 
-      <section class="section">
-        <h3>Author-supplied source</h3>
-        <div class="refs">
-          <p><strong>Provided citation:</strong> <em>The Big Food, Money Monopoly (PMC, 2025)</em>.</p>
-          <p>Note: This is the source the author supplied. I cite it here because it supports the claims that corporate money shapes public food policy — but readers should verify the document themselves.</p>
-        </div>
-      </section>
+            <div style="height:10px"></div>
 
-      <section class="section">
-        <h3>Short manifesto</h3>
-        <p>
-          I know this is true. I have watched how reports are framed, how phrases are chosen, and how inconvenient findings get buried or softened. When a recommendation protects a supply chain more than it protects people, that's not a mistake — it's a choice.
-          This page exists to document that choice plainly and to call for transparency.
-        </p>
+            <div class="evidence">
+              <h4>Procurement summary (2018–2023)</h4>
+              <table>
+                <thead><tr><th>Year</th><th>Major commodity contracts</th><th>% of total food procurement</th></tr></thead>
+                <tbody>
+                  <tr><td>2018</td><td>Rapeseed oil consortium — 3 year</td><td>18%</td></tr>
+                  <tr><td>2020</td><td>Bulk vegetable oils (multi-vendor)</td><td>22%</td></tr>
+                  <tr><td>2022</td><td>Processed ingredient framework</td><td>26%</td></tr>
+                </tbody>
+              </table>
+            </div>
 
-        <pre>
-Key claim: National food recommendations prioritize stability and industry interests as much as — or more than — raw public health.
-Status: I assert this as truth.
-Evidence: Author-supplied report (listed above); observable patterns in policy-making and corporate funding.
-Action: Demand public audits, disclosure, and independent science.
-        </pre>
-      </section>
+            <div style="height:10px"></div>
 
-      <footer>
-        <p>
-          <strong>Note:</strong> This page is written in the first person and presents the author's firm belief. It is an opinion/exposé — not a substitute for medical advice. If you are looking for clinical dietary guidance, consult licensed medical professionals and peer-reviewed literature.
-        </p>
-      </footer>
-    </main>
+            <div class="evidence">
+              <h4>Interview excerpt — former technical officer</h4>
+              <p><em>"We were repeatedly told to consider 'national supply resilience' when drafting any guidance that could affect staples. That instruction came from senior procurement and was explicit."</em></p>
+            </div>
+          </section>
+
+          <section class="section">
+            <h3>5. Timeline (selected)</h3>
+            <div class="timeline" role="doc">
+2020-06 — Major procurement framework for vegetable oils approved  
+2021-03 — Advisory review flags new cohort study on long-term product-specific outcomes (classified 'inconclusive')  
+2022-09 — Public guidance updated to emphasize 'replace saturated fats with unsaturated fats' with neutral product references  
+2023-11 — Internal memo: "avoid messaging that would reduce demand for contracted commodities"  
+2024-02 — RIG receives anonymous document dump; begins inquiry
+            </div>
+          </section>
+
+          <section class="section">
+            <h3>6. Analysis — how institutional incentives produce biased guidance</h3>
+            <p class="lead">A short logical reconstruction of the mechanisms our evidence supports:</p>
+            <ol>
+              <li><strong>Procurement dependence:</strong> Fejkmedelsvärket's operational role in large-scale food procurement creates an asymmetry: the agency must weigh public-health advice against immediate supply and budgetary constraints.</li>
+              <li><strong>Advisory composition:</strong> When panels include members with ties to commodity supply chains, technical debates shift from 'is harm present?' to 'how to avoid system shocks.' That reframing reduces the likelihood of strong product-specific warnings.</li>
+              <li><strong>Selective evidence heuristics:</strong> Using strict thresholds for 'causal proof' while simultaneously requiring urgent messaging to avoid panic creates a policy bias toward conservative language.</li>
+            </ol>
+
+            <p>These mechanisms are not conspiratorial; they are structural. Institutions embedded in supply systems will naturally internalize supply risks. The ethical question is whether transparency and conflict-mitigation processes are sufficient — in Fejkmedelsvärket's case, our evidence indicates they were not.</p>
+          </section>
+
+          <section class="section">
+            <h3>7. Recommendations</h3>
+            <ul>
+              <li><strong>Publish procurement-advisory conflict registers:</strong> make publicly available all procurement arrangements and advisory panel COI (conflicts of interest) disclosures linked to voting records.</li>
+              <li><strong>Create firewall policies:</strong> ensure procurement decisions and scientific advisory functions are institutionally separated with independent oversight.</li>
+              <li><strong>Fund independent replication:</strong> dedicate public funds to third-party replication of industry-funded nutrition research.</li>
+              <li><strong>Rapid evidence review protocol:</strong> adopt transparent fast-track review procedures for emerging product-specific health signals with pre-committed communication templates to avoid ad-hoc wording that favors stability over clarity.</li>
+            </ul>
+          </section>
+
+          <section class="section">
+            <h3>8. Limitations & ethics</h3>
+            <p>We emphasize that our investigation documents structural incentives and patterns; it does not assert deliberate criminality. Several documents were redacted; where primary evidence is withheld we present corroborating testimony and metadata. Our team followed strict ethical protocols for handling sensitive documents and protecting sources.</p>
+          </section>
+
+          <section class="section">
+            <h3>Appendices</h3>
+            <p>Appendix A: Redacted document excerpts (available on request for verified researchers).<br>
+               Appendix B: Interview protocols and list of interviewees (anonymized).<br>
+               Appendix C: Data tables and procurement spreadsheets (summary included).</p>
+          </section>
+
+          <footer>
+            <p>Contact: Research Integrity Group — <a href="mailto:contact@rig.example.org">contact@rig.example.org</a> • Questions about methodology or requests for data: <a href="#data">request data</a></p>
+          </footer>
+        </main>
+
+        <aside class="sidebar" id="data">
+          <h4>Quick facts</h4>
+          <p><strong>Investigation length:</strong> 6 months</p>
+          <p><strong>Team:</strong> policy analysts, two nutrition scientists, one epidemiologist, two investigative journalists</p>
+
+          <div style="margin:12px 0">
+            <a class="btn" href="#" onclick="window.print();return false">Print / Save PDF</a>
+          </div>
+
+          <h4>Featured evidence</h4>
+          <div style="margin-top:8px" class="evidence">
+            <strong>Document A — Advisory minutes</strong>
+            <p style="margin:6px 0">Redacted excerpt referencing "avoid messaging likely to reduce demand".</p>
+          </div>
+
+          <div style="margin-top:12px">
+            <h4>References & suggested reading</h4>
+            <p class="muted" style="color:var(--muted);font-size:13px">(General sources readers may consult for context and comparative examples)</p>
+            <ul style="font-size:14px;color:var(--muted);padding-left:18px">
+              <li>Reports on industry influence in public health policy (peer-reviewed reviews).</li>
+              <li>Investigative journalism on food industry lobbying and procurement policy.</li>
+              <li>Guidance on best-practice conflict-of-interest management in public agencies.</li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </div>
   </div>
 </body>
 </html>
